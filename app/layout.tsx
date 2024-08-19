@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: '--font-inter'
+});
+const josefin_sans = Roboto({
+  subsets: ["latin"],
+  variable: '--font-josefin-sans',
+  weight:'900',
+});
 
 export const metadata: Metadata = {
   title: "Coup d'Pod",
@@ -17,10 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${josefin_sans.variable}`}>
         <Navbar></Navbar>
         {children}
-        </body>
+      </body>
     </html>
   );
 }

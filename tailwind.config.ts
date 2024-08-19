@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "primary":"#0a9396",
-        "secondary":"#005f73"
+        "primary": "#0a9396",
+        "secondary": "#005f73"
       },
+      fontFamily: {
+        "josefin-sans": "var(--font-josefin-sans)",
+        "inter": "var(--font-inter)",
+      }
     },
   },
   plugins: [],

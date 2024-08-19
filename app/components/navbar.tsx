@@ -2,6 +2,31 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
 
+function NavbarLink() {
+  return (
+    <>
+      <Link href="/podcast" className="navbar-link">
+        Podcast
+      </Link>
+      <Link href="/youtube" className="navbar-link">
+        About Us
+      </Link>
+    </>
+  )
+}
+function NavbarSocials() {
+  return (
+    <>
+      <Link href="/podcast" className="navbar-link">
+        Podcast
+      </Link>
+      <Link href="/youtube" className="navbar-link">
+        Podcast
+      </Link>
+    </>
+  )
+}
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,7 +35,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white border-b-2">
+    <nav className="bg-white border-b-2 absolute w-full">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -62,13 +87,8 @@ const Navbar: React.FC = () => {
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
-                <Link href="/" className="text-black hover:text-secondary transition-colors px-3 py-2 rounded-md text-sm font-medium">
-                  Home
-                </Link>
-                <Link href="/about" className="text-black hover:text-secondary transition-colors px-3 py-2 rounded-md text-sm font-medium">
-                  About
-                </Link>
-                
+                <NavbarLink></NavbarLink>
+
               </div>
             </div>
           </div>
@@ -77,13 +97,9 @@ const Navbar: React.FC = () => {
 
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <Link href="/" className="text-black hover:bg-secondary hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-            Home
-          </Link>
-          <Link href="/about" className="text-black hover:bg-secondary hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-            About
-          </Link>
-          
+
+          <NavbarLink></NavbarLink>
+
         </div>
       </div>
     </nav>

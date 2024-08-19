@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .navbar-link{
+        @apply text-black hover:text-secondary transition-colors px-3 py-2 rounded-md text-sm font-medium
+    }
+}
