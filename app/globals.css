@@ -8,3 +8,12 @@
         @apply text-black hover:text-secondary transition-colors px-3 py-2 rounded-md text-sm font-medium
     }
 }
+
+@font-face {
+    font-family: 'icons';
+    src: url("/fonts/icons.ttf");
+}
+
+.font-icons {
+    font-family: 'icons';
+}

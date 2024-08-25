@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Noto_Serif, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
-const inter = Inter({
+const text = Roboto({
   subsets: ["latin"],
-  variable: '--font-inter'
+  variable: '--font-inter',
+  weight: '400'
 });
-const josefin_sans = Roboto({
+const title = Noto_Serif({
   subsets: ["latin"],
   variable: '--font-josefin-sans',
   weight:'900',
@@ -25,9 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${josefin_sans.variable}`}>
+      <body className={`${text.variable} ${title.variable}`}>
         <Navbar></Navbar>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

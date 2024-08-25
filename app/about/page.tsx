@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div>
       <main className="flex flex-col items-center justify-center min-h-screen py-2">
-        <h1 className="text-4xl font-bold mb-8">Podcast</h1>
+        <h1 className="text-4xl font-bold mb-8">About Us</h1>
         
       </main>
     </div>

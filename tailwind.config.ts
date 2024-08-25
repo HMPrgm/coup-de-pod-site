@@ -13,8 +13,8 @@ const config: Config = {
         "secondary": "#005f73"
       },
       fontFamily: {
-        "josefin-sans": "var(--font-josefin-sans)",
-        "inter": "var(--font-inter)",
+        "title": "var(--font-josefin-sans)",
+        "text": "var(--font-inter)",
       }
     },
   },
