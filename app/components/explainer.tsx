@@ -4,7 +4,7 @@ export default function Explainer({picture, picAlt, title, paragraph, swap}:{pic
     return (
       <div className='grid grid-cols-2 gap-4 m-10 justify-items-center'>
         <div className={swap?'order-last':''}>
-          <Image
+          <Image className='rounded-xl border-black border-2'
             src={picture}
             alt={picAlt}
             width={600}

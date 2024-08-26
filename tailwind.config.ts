@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "primary": "#0a9396",
-        "secondary": "#005f73"
+        "secondary": "#264653"
       },
       fontFamily: {
         "title": "var(--font-josefin-sans)",
