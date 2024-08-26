@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
             </div>
             <div className="flex-shrink-0">
               <Link href="/" className="text-black font-bold text-3xl lg:text-5xl font-title">
-                Coup de'Pod
+                Coup de&apos;Pod
               </Link>
             </div>
             <div className="hidden sm:block sm:ml-6">
