@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
-import { Noto_Serif, Roboto } from "next/font/google";
+import { Roboto, Roboto_Condensed, Baskervville } from "next/font/google";
+import localFont from '@next/font/local'
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
 const text = Roboto({
   subsets: ["latin"],
-  variable: '--font-inter',
-  weight: '400'
+  variable: '--font-text',
+  weight:'300',
 });
-const title = Noto_Serif({
+const title = Roboto_Condensed({
   subsets: ["latin"],
-  variable: '--font-josefin-sans',
-  weight:'900',
+  variable: '--font-title',
+  weight:'variable',
+});
+const design = Baskervville({
+  subsets: ["latin"],
+  variable: '--font-design',
+  weight: '400'
 });
 
 export const metadata: Metadata = {
@@ -27,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${text.variable} ${title.variable}`}>
+      <body className={`${text.variable} ${title.variable} ${design.variable}`}>
         <Navbar></Navbar>
         {children}
         <Footer></Footer>

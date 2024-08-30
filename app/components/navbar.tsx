@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white border-b-2 fixed w-full">
+    <nav className="bg-light border-b-2 fixed w-full">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between py-4 items-center">
 
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
               <NavbarSocials></NavbarSocials>
             </div>
             <div className="flex-shrink-0">
-              <Link href="/" className="text-black font-bold text-3xl lg:text-5xl font-title">
+              <Link href="/" className="text-black font-bold text-3xl lg:text-5xl font-design italic">
                 Coup de&apos;Pod
               </Link>
             </div>

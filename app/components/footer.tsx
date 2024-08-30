@@ -23,7 +23,7 @@ function NavbarSocials() {
 export default function Footer() {
   return (
     <footer>
-        <div className='flex justify-evenly px-12 py-4 bg-black text-white text-center items-center'>
+        <div className='flex justify-evenly px-12 py-4 bg-dark text-white text-center items-center'>
             <div className='text-lg font-medium'>&copy; Coup de&apos;Pod 2024</div>
             {/* <div><NavbarSocials></NavbarSocials></div> */}
         </div>

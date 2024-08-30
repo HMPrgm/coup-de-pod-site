@@ -9,12 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "primary": "#0a9396",
-        "secondary": "#264653"
+        "light": "#F5F5F5",
+        "light-2": "#e5e5e5",
+        "dark": "#424242",
+        "dark-2":"#4a4a4a",
+        "primary": "#48CFCB",
+        "secondary": "#229799"
       },
       fontFamily: {
-        "title": "var(--font-josefin-sans)",
-        "text": "var(--font-inter)",
+        "title": "var(--font-title)",
+        "text": "var(--font-text)",
+        "design": "var(--font-design)",
       }
     },
   },
