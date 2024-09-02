@@ -48,12 +48,12 @@ export default function Page() {
         backgroundImage: `url('/UVA.jpg')`,
         height: "972px"
       }}>
-        <div className='bg-dark bg-opacity-80 w-full h-full flex text-center text-light justify-center items-center pt-24 '>
-          <h1 className="text-7xl font-title mb-8 font-black italic max-w-[12em] leading-relaxed tracking-wider"  >Something Politics Probably Important</h1>
+        <div className='bg-dark bg-opacity-80 w-full h-full flex text-center text-light justify-center items-center pt-24  px-2'>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-title mb-8 font-black italic max-w-[20em] leading-snug tracking-wider"  >To Broadcast Significant, Unconventional Student Thought at UVA</h1>
         </div>
 
       </div>
-      <div className='px-24 lg:px-36 xl:px-48 flex flex-col gap-4 text-xl py-10'>
+      <div className='px-4 sm:px-12 md:px-24 lg:px-36 xl:px-48 flex flex-col gap-4 text-lg sm:text-xl py-10'>
         <h2 className='text-center font-title text-5xl pb-6'>About Us</h2>
         {/* <Explainer picAlt='Temporary' picture='/UVA.jpg' swap={true} title='Our History' paragraph="Coup de'Pod was founded in [Month] of 2023 . . ."></Explainer> */}
         <p>

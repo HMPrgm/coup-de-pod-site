@@ -14,7 +14,7 @@ const config: Config = {
         "dark": "#424242",
         "dark-2":"#4a4a4a",
         "primary": "#48CFCB",
-        "secondary": "#229799"
+        "secondary": "#2E7D32"
       },
       fontFamily: {
         "title": "var(--font-title)",
