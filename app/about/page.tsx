@@ -3,20 +3,61 @@ import Explainer from '../components/explainer';
 import Image from 'next/image';
 
 interface TeamMember {
-  jobTitle: string,
   name: string,
   desc: string,
   photo: string
 }
+interface TeamCategory {
+  name: string,
+  team: TeamMember[]
+}
 
-let team: TeamMember[] = [
+let team: TeamCategory[] = [
   {
-    jobTitle: "Producer",
-    name: "Henry",
-    desc: "description",
-    photo: "Henry.png"
+    name:"Co-Hosts",
+    team: [
+      {
+        name:"Juliana Paine",
+        desc:"",
+        photo:"Juls.jpg"
+      },
+      {
+        name: "Lily Bass",
+        desc: "Lily Bass is a second year at the University of Virginia planning on studying Government and English. Lily lives in Arlington Virginia, but feels it very important it be known that she lived 17 years in Washington D.C. Lily sings in a band (name not important because she doesn’t like it), and she is a member of the club Undergraduate Women in Law. Lily joined Bipodisan because she loves to talk and argue and is fascinated by the world’s current (albeit dumpster-fiery) political climate. ",
+        photo: "Lily.png"
+      },
+    ]
+  },
+  {
+    name: "Research",
+    team: []
+  },
+  {
+    name: "Production",
+    team: [
+      {
+        name: "Henry Morris",
+        desc: "description",
+        photo: "HenryM.png"
+      }
+    ]
+  },
+  {
+    name: "Social Media",
+    team:[
+      {
+        name: "Josh Gao",
+        desc: "Josh Gao is a second-year undergraduate student studying Computer Science and Mathematics, provided he doesn’t fail linear algebra this semester. He is from New York and enjoys reading science fiction and playing the cello in his free time. He firmly believes that Bipodisan is the best podcast on Grounds not only because he’s the social media person for it, but also because the work to bridge the partisan divide starts in college campuses, led by students. ",
+        photo: "Josh.png"
+      }
+    ]
   }
 ]
+
+
+function TeamCategoryDisplay({category}:{category:TeamCategory}) {
+  
+}
 
 function TeamMemberDisplay({ member }: { member: TeamMember }) {
   return (
@@ -31,7 +72,7 @@ function TeamMemberDisplay({ member }: { member: TeamMember }) {
         />
       </div>
       <div className='flex-grow'>
-        <h3 className='font-title text-3xl font-normal '><span className='font-medium'>{member.name}:</span> {member.jobTitle}</h3>
+        <h3 className='font-title text-3xl font-normal '><span className='font-medium'>{member.name}:</span></h3>
         <p className='text-lg text-dark'>{member.desc}</p>
       </div>
     </div>
