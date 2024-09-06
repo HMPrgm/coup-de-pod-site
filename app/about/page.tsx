@@ -94,7 +94,7 @@ function TeamCategoryDisplay({ category }: { category: TeamCategory }) {
 
 function TeamMemberDisplay({ member }: { member: TeamMember }) {
   return (
-    <div className='grid md:grid-cols-3 gap-24 w-full py-12 px-4 sm:px-12 md:px-24 items-center'>
+    <div className='grid md:grid-cols-3 gap-12 md:gap-24 w-full py-12 px-4 sm:px-12 md:px-24 items-center'>
 
       <div>
         <Image className='object-cover hidden md:block rounded h-72 w-72'
@@ -139,7 +139,7 @@ export default function Page() {
       </div>
       <div className='flex flex-col items-center gap-12 pt-12 border-dark border-opacity-40 border-t-2'>
         <h2 className='text-center text-5xl text-black font-title '>Meet the Team</h2>
-        <div className='bg-light-2 pt-5 mb-5 lg:w-[90vw] xl:w-[80vw] rounded-xl'>
+        <div className='border-dark border-opacity-40 border-2 pt-5 mb-5 lg:w-[90vw] xl:w-[80vw] rounded-xl'>
           {team.map(c => <TeamCategoryDisplay key={c.name} category={c}></TeamCategoryDisplay>)}
         </div>
       </div>
