@@ -14,12 +14,12 @@ interface TeamCategory {
 
 let team: TeamCategory[] = [
   {
-    name:"Co-Hosts",
+    name: "Co-Hosts",
     team: [
       {
-        name:"Juliana Paine",
-        desc:"",
-        photo:"Juls.jpg"
+        name: "Juliana Paine",
+        desc: "",
+        photo: "Juls.jpg"
       },
       {
         name: "Lily Bass",
@@ -37,13 +37,13 @@ let team: TeamCategory[] = [
         photo: "Justin.png"
       },
       {
-        name:"Michelle Nguyen",
-        desc:"Michelle Nguyen is a second-year undergraduate majoring in Government with a concentration in American Politics. At UVA, she serves as a Volunteer Income Tax Assistant for Creating, Assets, Savings, and Hope (CASH) as well as a volunteer translator for the Multilingual Outreach Volunteer Effort (MOVE). In her free time, she enjoys reading, listening to political podcasts (Guess which one is her favorite!), and exploring the restaurants of Charlottesville. Michelle joined Coup de'Pod due to a firm belief in the value of free speech, and she hopes to contribute to the preservation of a culture of civil discourse in higher education. ",
-        photo:"Michelle.png"
+        name: "Michelle Nguyen",
+        desc: "Michelle Nguyen is a second-year undergraduate majoring in Government with a concentration in American Politics. At UVA, she serves as a Volunteer Income Tax Assistant for Creating, Assets, Savings, and Hope (CASH) as well as a volunteer translator for the Multilingual Outreach Volunteer Effort (MOVE). In her free time, she enjoys reading, listening to political podcasts (Guess which one is her favorite!), and exploring the restaurants of Charlottesville. Michelle joined Coup de'Pod due to a firm belief in the value of free speech, and she hopes to contribute to the preservation of a culture of civil discourse in higher education. ",
+        photo: "Michelle.jpg"
       },
       {
-        name:"William \"Berty\" Avellar",
-        desc:"William \"Berty\" Avellar is a fourth-year transfer student in the College of Arts & Sciences at UVA. Majoring in History, Berty believes an intersection of historical perspectives leads to the deepest understanding of any given topic. — They come from the Appalachian mountains in SWVA. Growing up they spent most of their time outside and still hold a love for hiking and fresh air. — Berty believes in Coup de'Pod because they know the revelatory power diametrical viewpoints can have when pitted against each other in a civil format. They joined Coup de'Pod because they wanted to be a part of a group that promotes and platforms challenging conversations.",
+        name: "William \"Berty\" Avellar",
+        desc: "William \"Berty\" Avellar is a fourth-year transfer student in the College of Arts & Sciences at UVA. Majoring in History, Berty believes an intersection of historical perspectives leads to the deepest understanding of any given topic. — They come from the Appalachian mountains in SWVA. Growing up they spent most of their time outside and still hold a love for hiking and fresh air. — Berty believes in Coup de'Pod because they know the revelatory power diametrical viewpoints can have when pitted against each other in a civil format. They joined Coup de'Pod because they wanted to be a part of a group that promotes and platforms challenging conversations.",
         photo: "Berty.png"
       }
     ]
@@ -52,9 +52,9 @@ let team: TeamCategory[] = [
     name: "Production",
     team: [
       {
-        name:"Will Kennon",
-        desc:"Will Kennon is a fourth-year Media Studies student from Richmond, Virginia. After a summer internship at CBS 6 News, he is seeking a career in production, and so is happy to be a part of Coup de'Pod’s production team. Will is excited to contribute his passion for video and audio editing to Coup de'Pod and its listeners, even if that means a few ill-advised silly sound effects get added (that only he may find funny). He works diligently with Henry Morris to make sure every episode is both entertaining, informational, and most importantly, audible. Outside of Coup de'Pod, Will enjoys working at Sal’s (money) and is the president of his fraternity (somehow more work and less money). ",
-        photo:"Will.png"
+        name: "Will Kennon",
+        desc: "Will Kennon is a fourth-year Media Studies student from Richmond, Virginia. After a summer internship at CBS 6 News, he is seeking a career in production, and so is happy to be a part of Coup de'Pod’s production team. Will is excited to contribute his passion for video and audio editing to Coup de'Pod and its listeners, even if that means a few ill-advised silly sound effects get added (that only he may find funny). He works diligently with Henry Morris to make sure every episode is both entertaining, informational, and most importantly, audible. Outside of Coup de'Pod, Will enjoys working at Sal’s (money) and is the president of his fraternity (somehow more work and less money). ",
+        photo: "Will.jpg"
       },
       {
         name: "Henry Morris",
@@ -70,39 +70,41 @@ let team: TeamCategory[] = [
   },
   {
     name: "Social Media",
-    team:[
+    team: [
       {
         name: "Josh Gao",
         desc: "Josh Gao is a third-year undergraduate student studying Computer Science and Mathematics, provided he doesn’t fail linear algebra this semester. He is from New York and enjoys reading science fiction and playing the cello in his free time. He firmly believes that Coup de'Pod is the best podcast on Grounds not only because he’s the social media person for it, but also because the work to bridge the partisan divide starts in college campuses, led by students. ",
-        photo: "Josh.png"
+        photo: "Josh.jpg"
       }
     ]
   }
 ]
 
 
-function TeamCategoryDisplay({category}:{category:TeamCategory}) {
+function TeamCategoryDisplay({ category }: { category: TeamCategory }) {
   return (
     <div className='flex flex-col'>
-      <h3 className='text-center'>{category.name}</h3>
-      {category.team.map(m => <TeamMemberDisplay key={m.name} member={m}></TeamMemberDisplay>)}
+      <h3 className='text-center text-5xl font-medium font-title'>{category.name}</h3>
+      <div className=''>
+        {category.team.map(m => <TeamMemberDisplay key={m.name} member={m}></TeamMemberDisplay>)}
+      </div>
     </div>
   )
 }
 
 function TeamMemberDisplay({ member }: { member: TeamMember }) {
   return (
-    <div className='flex justify-evenly gap-24 w-full py-12 px-24 bg-light-2'>
+    <div className='grid md:grid-cols-3 gap-24 w-full py-12 px-4 sm:px-12 md:px-24 items-center'>
 
       <div>
-        <Image className='border-2 border-dark border-opacity-20 rounded-xl'
+        <Image className='object-cover hidden md:block rounded h-72 w-72'
           src={`/team-photos/${member.photo}`}
           alt={member.name}
           width={300}
           height={300}
         />
       </div>
-      <div className='flex-grow'>
+      <div className='col-span-2'>
         <h4 className='font-title text-3xl font-medium'>{member.name}</h4>
         <p className='text-lg text-dark'>{member.desc}</p>
       </div>
@@ -136,8 +138,10 @@ export default function Page() {
         </p>
       </div>
       <div className='flex flex-col items-center gap-12 pt-12 border-dark border-opacity-40 border-t-2'>
-        <h2 className='text-center text-5xl text-black font-title font-bold'>Meet the Team</h2>
-        {team.map(c => <TeamCategoryDisplay key={c.name} category={c}></TeamCategoryDisplay>)}
+        <h2 className='text-center text-5xl text-black font-title '>Meet the Team</h2>
+        <div className='bg-light-2 pt-5 mb-5 lg:w-[90vw] xl:w-[80vw] rounded-xl'>
+          {team.map(c => <TeamCategoryDisplay key={c.name} category={c}></TeamCategoryDisplay>)}
+        </div>
       </div>
     </div>
   );
