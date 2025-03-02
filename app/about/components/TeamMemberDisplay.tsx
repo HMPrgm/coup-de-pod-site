@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { TeamMember } from './TeamMemberInfo'
+import { TeamMember } from '../data/TeamMemberInfo'
 
 export default function TeamMemberDisplay({ member }: { member: TeamMember }) {
   return (
