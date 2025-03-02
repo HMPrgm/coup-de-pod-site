@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Explainer from '../components/explainer';
 import Image from 'next/image';
-
-
+import team, { TeamCategory, TeamMember } from './TeamMemberInfo';
 
 
 
