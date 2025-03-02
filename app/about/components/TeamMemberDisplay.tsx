@@ -1,26 +1,28 @@
 import React from 'react'
 import Image from 'next/image'
 import { TeamMember } from '../data/TeamMemberInfo'
+TeamMemberDisplay.defaultProps = {
+  left: true
+}
 
-export default function TeamMemberDisplay({ member }: { member: TeamMember }) {
+export default function TeamMemberDisplay({ member, left }: { member: TeamMember, left: boolean }) {
   return (
-    <div className='flex flex-col px-6 py-4 gap-4'>
-      <div className='flex items-center mx-auto'>
-        <div className='aspect-square w-44'>
-          <Image className='object-fill rounded-full'
-            src={`/team-photos/${member.photo}`}
-            alt={member.name}
-            width={300}
-            height={300}
-          />
-        </div>
-        <div className='flex-grow ml-12'>
-          <h4 className='font-title text-5xl font-medium mb-2'>{member.name}</h4>
-          <h4 className='font-title text-3xl font-normal text-dark'>{member.title}</h4>
-        </div>
+    <div className={`flex flex-col md:flex-row px-6 py-4 items-center md:items-start gap-12 mx-40 ${left ? '' : 'md:flex-row-reverse' }`}>
+      <div className='relative aspect-square w-44 lg:w-96 flex-shrink-0'>
+        <Image 
+          className='object-cover rounded-full border-4 border-dark'
+          src={`/team-photos/${member.photo}`}
+          alt={member.name}
+          fill
+        />
       </div>
-      <div className='col-span-2'>
-        <p className=' text-dark'>{member.desc}</p>
+
+      <div>
+        <div className={`text-center ${left ?'md:text-left' : 'md:text-right'}`}>
+          <h4 className='font-title text-4xl md:text-5xl font-medium mb-2'>{member.name}</h4>
+          <h4 className='font-title text-2xl md:text-3xl font-normal text-dark mb-2'>{member.title}</h4>
+        </div>
+        <p className='text-dark text-justify'>{member.desc}</p>
       </div>
     </div>
   )
