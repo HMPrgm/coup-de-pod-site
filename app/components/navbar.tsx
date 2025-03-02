@@ -23,7 +23,7 @@ function NavbarSocials() {
       <Link href="https://podcasts.apple.com/us/podcast/coup-depod/id1713096283"  target='_blank' className="navbar-link font-icons text-4xl">
         {/* Apple Podcasts */}h
       </Link>
-      <Link href="https://www.youtube.com/@Bipodisan" target='_blank' className="navbar-link font-icons text-4xl">
+      <Link href="https://www.youtube.com/@coupdepod" target='_blank' className="navbar-link font-icons text-4xl">
         {/* YouTube */}y
       </Link>
       <Link href="https://www.instagram.com/coupdepod/" target='_blank' className="navbar-link font-icons text-4xl">
@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-light border-b-2 fixed w-full">
+    <nav className="bg-light border-b-2 fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between py-4 items-center">
 
