@@ -20,7 +20,10 @@ const config: Config = {
         "title": "var(--font-title)",
         "text": "var(--font-text)",
         "design": "var(--font-design)",
-      }
+      },
+      backgroundImage: {
+        'hero-pattern': "url('/team_photo.jpeg')",
+      },
     },
   },
   plugins: [],
