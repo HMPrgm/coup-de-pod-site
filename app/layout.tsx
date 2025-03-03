@@ -22,7 +22,7 @@ const design = Baskervville({
 });
 
 export const metadata: Metadata = {
-  title: "Coup d'Pod",
+  title: "Coup de'Pod",
   description: "A thoughtful and entertaining conversation about politics",
 };
 
