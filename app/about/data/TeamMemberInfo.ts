@@ -27,7 +27,7 @@ let team: TeamMember[] = [
     {
         name:"Nick Felsman",
         title:"Co Host for short-form content",
-        desc:"Nick is a first-year undecided student. He was born in Charlottesville and moved all over the world just to settle right back in Virginia. He has two dogs (alr that chill). Nick mains Rocket in the game Marvel Rivals - he just got Grandmaster (go Nick). He's going places. Nick's an ally asf. Nick is also a member of the amazing club middle grounds where he delves deep into interesting political topics with grace. Nick loves to wear his headphones on his head. Nick is currently in his winter arc (like an all-year thing?). Nick knows sick vape tricks and was on a vape team in highschool - they would meet at the mall. Sick. ",
+        desc:"Nick is a first-year undecided student. He was born in Charlottesville and moved all over the world just to settle right back in Virginia. He has two dogs (alr that chill). Nick mains Rocket in the game Marvel Rivals - he just got Grandmaster (go Nick). He's going places. Nick is also a member of the amazing club middle grounds where he delves deep into interesting political topics with grace. Nick loves to wear his headphones on his head. Nick is currently in his winter arc (like an all-year thing?).",
         photo:"Nick.jpg",
     },
     {
