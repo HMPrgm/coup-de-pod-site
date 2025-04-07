@@ -23,8 +23,9 @@ function NavbarSocials() {
 export default function Footer() {
   return (
     <footer>
-        <div className='flex justify-evenly px-12 py-4 bg-black text-white text-center items-center'>
-            <div className='text-lg font-medium'>&copy; Coup de&apos;Pod 2025</div>
+        <div className='flex justify-evenly px-12 py-4 bg-black text-white text-center items-center flex-col gap-4'>
+            <div className=' font-medium'>&copy; Coup de&apos;Pod 2025</div>
+            <p className='text-slate-300 text-xs'>Although this organization has members who are University of Virginia students and may have University employees associated or engaged in its activities and affairs, the organization is not a part of or an agency of the University. It is a separate and independent organization, which is responsible for and manages its own activities and affairs. The University does not direct, supervise or control the organization and is not responsible for the organization’s contracts, acts or omissions.</p>
             {/* <div><NavbarSocials></NavbarSocials></div> */}
         </div>
     </footer>
