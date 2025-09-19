@@ -31,12 +31,6 @@ let team: TeamMember[] = [
         photo:"Jacob.jpg",
     },
     {
-        name:"Michelle Nguyen",
-        title:"Director of Research",
-        desc:"Michelle Nguyen is a third-year undergraduate majoring in Government with a concentration in American Politics. She joined Coup de'Pod due to her firm belief in the value of free speech, and she hopes to contribute to a culture of civil discourse in higher education. Through her role as Director of Research, she has had the opportunity to analyze the wide range of perspectives featured in international, national, and local policy debates. At UVA, Michelle also serves as a Program Director for Creating, Assets, Savings, and Hope (CASH) and a research assistant for the National Marriage Project. In her free time, she enjoys reading, listening to political podcasts, and exploring the restaurants of Charlottesville.",
-        photo:"Michelle.jpg",
-    },
-    {
         name:"William \"Berty\" Avellar",
         title:"Codirector and Researcher",
         desc:"Berty is a transfer student at University of Virginia seeking a bachelors in history. They're from Floyd, VA, famous for its bluegrass, music festival, and assorted trees - talking christmas trees! Berty transferred to University of Virginia from Virginia Western Community College in Roanoke, VA. They found the transition to be a bit of a shock at first but have come to love the beautiful scenery and palpable history on Grounds and in Charlottesville. In their spare time they like to read, write, hike, and go out with friends. On weekends you can either find them at home under a good book, or in DC at a gay-bar. Berty joined Coup de Pod because they felt empowered by the friendly atmosphere and inflamed by CDP's mission statement. In their time at CDP Berty feels privileged to have researched topics stretching from UVA's foreign investment to what role politics does and should play in the classroom - looking at topics from every angle and not shying away from the hard questions.",
